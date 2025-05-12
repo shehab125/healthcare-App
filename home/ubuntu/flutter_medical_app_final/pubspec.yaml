@@ -34,6 +34,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +65,14 @@ flutter:
     - assets/icons/pharmacy.png
     - assets/icons/specialties.png
     - assets/icons/record.png
+    - assets/icons/specialties/cardiology.png
+    - assets/icons/specialties/dermatology.png
+    - assets/icons/specialties/general.png
+    - assets/icons/specialties/gynecology.png
+    - assets/icons/specialties/dentistry.png
+    - assets/icons/specialties/oncology.png
+    - assets/icons/specialties/ophthalmology.png
+    - assets/icons/specialties/orthopedics.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
