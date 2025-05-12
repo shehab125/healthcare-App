@@ -3,14 +3,14 @@ import 'package:medical_app_base/models/doctor.dart';
 import 'package:medical_app_base/widgets/doctor_card.dart';
 import 'package:medical_app_base/screens/specialties_page.dart';
 
-class GeneralMedicinePage extends StatefulWidget {
-  const GeneralMedicinePage({super.key});
+class OrthopedicsPage extends StatefulWidget {
+  const OrthopedicsPage({super.key});
 
   @override
-  State<GeneralMedicinePage> createState() => _GeneralMedicinePageState();
+  State<OrthopedicsPage> createState() => _OrthopedicsPageState();
 }
 
-class _GeneralMedicinePageState extends State<GeneralMedicinePage> {
+class _OrthopedicsPageState extends State<OrthopedicsPage> {
   String searchQuery = '';
   bool showFavoritesOnly = false;
 
@@ -29,7 +29,7 @@ class _GeneralMedicinePageState extends State<GeneralMedicinePage> {
 
   @override
   Widget build(BuildContext context) {
-    final doctors = DoctorsData.generalMedicineDoctors
+    final doctors = DoctorsData.orthopedicsDoctors
         .where((doc) {
           final matchesSearch = doc.name.toLowerCase().contains(searchQuery.toLowerCase());
           if (showFavoritesOnly) {
@@ -71,7 +71,7 @@ class _GeneralMedicinePageState extends State<GeneralMedicinePage> {
                     ],
                   ),
                   const Text(
-                    'General Medicine',
+                    'Orthopedics',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 28,
