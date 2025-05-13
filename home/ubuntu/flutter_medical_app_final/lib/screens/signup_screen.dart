@@ -1,10 +1,10 @@
 // lib/screens/signup_screen.dart
 import 'package:flutter/material.dart';
-import 'package:medical_app_base/screens/home_screen.dart';
-import 'package:medical_app_base/screens/login_screen.dart';
-import 'package:medical_app_base/utils/colors.dart';
-import 'package:medical_app_base/utils/styles.dart';
-import 'package:medical_app_base/widgets/custom_textfield.dart';
+import 'package:flutter_medical_app_final/screens/home_screen.dart';
+import 'package:flutter_medical_app_final/screens/login_screen.dart';
+import 'package:flutter_medical_app_final/utils/colors.dart';
+import 'package:flutter_medical_app_final/utils/styles.dart';
+import 'package:flutter_medical_app_final/widgets/custom_textfield.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);

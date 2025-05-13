@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:medical_app_base/utils/colors.dart';
-import 'package:medical_app_base/utils/styles.dart';
-import 'package:medical_app_base/screens/favorite_page.dart';
-import 'package:medical_app_base/screens/doctors_page.dart';
-import 'package:medical_app_base/screens/pharmacy_page.dart';
-import 'package:medical_app_base/screens/specialties_page.dart';
-import 'package:medical_app_base/screens/record_page.dart';
-import 'package:medical_app_base/screens/cardiology_page.dart';
-import 'package:medical_app_base/screens/dermatology_page.dart';
-import 'package:medical_app_base/screens/general_medicine_page.dart';
-import 'package:medical_app_base/screens/gynecology_page.dart';
-import 'package:medical_app_base/screens/odontology_page.dart';
-import 'package:medical_app_base/screens/oncology_page.dart';
-import 'package:medical_app_base/screens/schedule_page.dart';
-import 'package:medical_app_base/screens/records_page.dart';
-import 'package:medical_app_base/screens/profile_page.dart';
-import 'package:medical_app_base/screens/notifications_page.dart';
-import 'package:medical_app_base/screens/settings_page.dart';
+import 'package:flutter_medical_app_final/utils/colors.dart';
+import 'package:flutter_medical_app_final/utils/styles.dart';
+import 'package:flutter_medical_app_final/screens/favorite_page.dart';
+import 'package:flutter_medical_app_final/screens/doctors_page.dart';
+import 'package:flutter_medical_app_final/screens/pharmacy_page.dart';
+import 'package:flutter_medical_app_final/screens/specialties_page.dart';
+import 'package:flutter_medical_app_final/screens/record_page.dart';
+import 'package:flutter_medical_app_final/screens/cardiology_page.dart';
+import 'package:flutter_medical_app_final/screens/dermatology_page.dart';
+import 'package:flutter_medical_app_final/screens/general_medicine_page.dart';
+import 'package:flutter_medical_app_final/screens/gynecology_page.dart';
+import 'package:flutter_medical_app_final/screens/odontology_page.dart';
+import 'package:flutter_medical_app_final/screens/oncology_page.dart';
+import 'package:flutter_medical_app_final/screens/schedule_page.dart';
+import 'package:flutter_medical_app_final/screens/records_page.dart';
+import 'package:flutter_medical_app_final/screens/profile_page.dart';
+import 'package:flutter_medical_app_final/screens/notifications_page.dart';
+import 'package:flutter_medical_app_final/screens/settings_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -184,6 +184,13 @@ class _MainHomeContent extends StatelessWidget {
                       label: 'Record',
                       onTap: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => RecordPage()));
+                      },
+                    ),
+                    _buildCategoryButton(
+                      icon: Icons.payment,
+                      label: 'Payment',
+                      onTap: () {
+                        Navigator.pushNamed(context, '/payment_method');
                       },
                     ),
                   ],

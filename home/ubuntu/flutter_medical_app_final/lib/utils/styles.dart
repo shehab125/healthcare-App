@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medical_app_base/utils/colors.dart'; // Adjusted import path
+import 'package:flutter_medical_app_final/utils/colors.dart';
 
 class AppStyles {
   static const TextStyle headlineStyle = TextStyle(

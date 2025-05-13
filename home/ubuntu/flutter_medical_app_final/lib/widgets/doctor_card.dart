@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:medical_app_base/models/doctor.dart';
-import 'package:medical_app_base/widgets/doctor_avatar.dart';
+import 'package:flutter_medical_app_final/models/doctor.dart';
+import 'package:flutter_medical_app_final/widgets/doctor_avatar.dart';
 
 class DoctorCard extends StatelessWidget {
   final Doctor doctor;

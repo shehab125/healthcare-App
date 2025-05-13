@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:medical_app_base/models/doctor.dart';
-import 'package:medical_app_base/widgets/doctor_card.dart';
-import 'package:medical_app_base/screens/specialties_page.dart';
+import 'package:flutter_medical_app_final/models/doctor.dart';
+import 'package:flutter_medical_app_final/widgets/doctor_card.dart';
+import 'package:flutter_medical_app_final/screens/specialties_page.dart';
 
 class GeneralMedicinePage extends StatefulWidget {
   const GeneralMedicinePage({super.key});

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:medical_app_base/screens/ophthalmology_page.dart';
-import 'package:medical_app_base/screens/orthopedics_page.dart';
-import 'package:medical_app_base/screens/dermatology_page.dart';
-import 'package:medical_app_base/screens/cardiology_page.dart';
-import 'package:medical_app_base/screens/general_medicine_page.dart';
-import 'package:medical_app_base/screens/gynecology_page.dart';
-import 'package:medical_app_base/screens/odontology_page.dart';
-import 'package:medical_app_base/screens/oncology_page.dart';
+import 'package:flutter_medical_app_final/screens/ophthalmology_page.dart';
+import 'package:flutter_medical_app_final/screens/orthopedics_page.dart';
+import 'package:flutter_medical_app_final/screens/dermatology_page.dart';
+import 'package:flutter_medical_app_final/screens/cardiology_page.dart';
+import 'package:flutter_medical_app_final/screens/general_medicine_page.dart';
+import 'package:flutter_medical_app_final/screens/gynecology_page.dart';
+import 'package:flutter_medical_app_final/screens/odontology_page.dart';
+import 'package:flutter_medical_app_final/screens/oncology_page.dart';
 
 class SpecialtiesPage extends StatefulWidget {
   const SpecialtiesPage({super.key});

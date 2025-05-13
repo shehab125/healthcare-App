@@ -20,6 +20,7 @@
         <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
+            <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_android-2.4.10/android" />
             <option value="$PROJECT_DIR$/home/ubuntu/flutter_medical_app_final/android" />
             <option value="$PROJECT_DIR$/home/ubuntu/flutter_medical_app_final/android/app" />
             <option value="$PROJECT_DIR$/../../../../src/flutter/packages/flutter_tools/gradle" />

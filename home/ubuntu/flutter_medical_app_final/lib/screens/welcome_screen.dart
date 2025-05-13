@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:medical_app_base/utils/colors.dart';
-import 'package:medical_app_base/screens/login_screen.dart';
-import 'package:medical_app_base/screens/signup_screen.dart';
+import 'package:flutter_medical_app_final/utils/colors.dart';
+import 'package:flutter_medical_app_final/screens/login_screen.dart';
+import 'package:flutter_medical_app_final/screens/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);

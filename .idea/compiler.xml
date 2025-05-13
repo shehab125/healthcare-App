@@ -21,7 +21,6 @@
       <module name="android.package_info_plus" target="17" />
       <module name="android.path_provider_android" target="17" />
       <module name="android.permission_handler_android" target="17" />
-      <module name="android.shared_preferences_android" target="17" />
       <module name="android.sqflite_android" target="17" />
       <module name="android.stripe_android" target="17" />
       <module name="android.url_launcher_android" target="17" />
