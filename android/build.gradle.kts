@@ -10,6 +10,7 @@ buildscript {
         kotlin_version = "1.9.22"
         gradle_version = "8.2.2"
         compose_version = "1.5.4"
+        // ndk_version = "26.3.11579264"
     }
     repositories {
         google()
