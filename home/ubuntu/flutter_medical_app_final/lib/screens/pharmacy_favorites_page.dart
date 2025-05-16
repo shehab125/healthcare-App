@@ -7,13 +7,16 @@ import 'schedule_page.dart';
 import 'pharmacy_info_page.dart';
 import '../utils/favorites_manager.dart';
 
-class FavoritePage extends StatefulWidget {
+class PharmacyFavoritesPage extends StatefulWidget {
+  const PharmacyFavoritesPage({super.key});
+
   @override
-  State<FavoritePage> createState() => _FavoritePageState();
+  State<PharmacyFavoritesPage> createState() => _PharmacyFavoritesPageState();
 }
 
-class _FavoritePageState extends State<FavoritePage> {
+class _PharmacyFavoritesPageState extends State<PharmacyFavoritesPage> {
   String searchText = '';
+  List<Map<String, dynamic>> favoritePharmacies = [];
 
   @override
   void initState() {
@@ -23,17 +26,18 @@ class _FavoritePageState extends State<FavoritePage> {
 
   Future<void> _loadFavorites() async {
     await FavoritesManager.init();
-    setState(() {});
+    setState(() {
+      favoritePharmacies = FavoritesManager.getFavoritePharmacies();
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    List<Map<String, dynamic>> favoritePharmacies = FavoritesManager.getFavoritePharmacies();
-    
     List<Map<String, dynamic>> filteredPharmacies = favoritePharmacies.where((pharmacy) {
+      if (pharmacy.isEmpty) return false;
       final input = searchText.toLowerCase().trim();
-      final name = (pharmacy['name'] ?? '').toLowerCase();
-      final address = (pharmacy['address'] ?? '').toLowerCase();
+      final name = (pharmacy['name'] as String? ?? '').toLowerCase();
+      final address = (pharmacy['address'] as String? ?? '').toLowerCase();
       return input.isEmpty || name.contains(input) || address.contains(input);
     }).toList();
 
@@ -62,7 +66,7 @@ class _FavoritePageState extends State<FavoritePage> {
                 ),
                 SizedBox(width: 8),
                 Text(
-                  'Favorites',
+                  'Favorite Pharmacies',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
@@ -77,15 +81,22 @@ class _FavoritePageState extends State<FavoritePage> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Find your favorites', style: TextStyle(color: Color(0xFF1EC8C8), fontWeight: FontWeight.bold, fontSize: 16)),
+                Text(
+                  'Find your favorite pharmacy',
+                  style: TextStyle(
+                    color: Color(0xFF1EC8C8),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
                 SizedBox(height: 10),
                 TextField(
                   decoration: InputDecoration(
-                    labelText: 'Search',
+                    labelText: 'Search Pharmacy Name or Address',
                     labelStyle: TextStyle(color: Color(0xFF1EC8C8)),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                     suffixIcon: searchText.isNotEmpty
@@ -148,7 +159,7 @@ class _FavoritePageState extends State<FavoritePage> {
                             );
                           },
                           child: Padding(
-                            padding: const EdgeInsets.all(16.0),
+                            padding: EdgeInsets.all(16.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -156,39 +167,65 @@ class _FavoritePageState extends State<FavoritePage> {
                                   children: [
                                     Icon(Icons.location_on, color: Color(0xFF1EC8C8)),
                                     SizedBox(width: 6),
-                                    Text(
-                                      pharmacy['name'] ?? '',
-                                      style: TextStyle(
-                                        color: Color(0xFF1EC8C8),
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 17,
+                                    Expanded(
+                                      child: Text(
+                                        pharmacy['name'] as String? ?? '',
+                                        style: TextStyle(
+                                          color: Color(0xFF1EC8C8),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 17,
+                                        ),
                                       ),
                                     ),
-                                    Spacer(),
                                     Container(
                                       padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                                       decoration: BoxDecoration(
                                         color: Color(0xFFE6F7FA),
                                         borderRadius: BorderRadius.circular(12),
                                       ),
-                                      child: Text('Distance: ${pharmacy['distance'] ?? ''}', style: TextStyle(color: Color(0xFF1EC8C8), fontWeight: FontWeight.bold, fontSize: 13)),
+                                      child: Text(
+                                        'Distance: ${pharmacy['distance'] as String? ?? ''}',
+                                        style: TextStyle(
+                                          color: Color(0xFF1EC8C8),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13,
+                                        ),
+                                      ),
                                     ),
                                   ],
                                 ),
                                 SizedBox(height: 4),
-                                Text('Address: ${pharmacy['address'] ?? ''}', style: TextStyle(color: Colors.black87, fontSize: 14)),
-                                Text('Attention Schedule: ${pharmacy['schedule'] ?? ''}', style: TextStyle(color: Colors.black54, fontSize: 13)),
+                                Text(
+                                  'Address: ${pharmacy['address'] as String? ?? ''}',
+                                  style: TextStyle(color: Colors.black87, fontSize: 14),
+                                ),
+                                Text(
+                                  'Attention Schedule: ${pharmacy['schedule'] as String? ?? ''}',
+                                  style: TextStyle(color: Colors.black54, fontSize: 13),
+                                ),
                                 SizedBox(height: 6),
                                 Row(
                                   children: [
-                                    Text('Recommended', style: TextStyle(color: Color(0xFF1EC8C8), fontWeight: FontWeight.bold, fontSize: 13)),
+                                    Text(
+                                      'Recommended',
+                                      style: TextStyle(
+                                        color: Color(0xFF1EC8C8),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 13,
+                                      ),
+                                    ),
                                     SizedBox(width: 8),
                                     Row(
-                                      children: List.generate(5, (i) => Icon(
-                                        Icons.star,
-                                        color: i < (pharmacy['rating'] ?? 0) ? Color(0xFF1EC8C8) : Colors.grey[300],
-                                        size: 18,
-                                      )),
+                                      children: List.generate(
+                                        5,
+                                        (i) => Icon(
+                                          Icons.star,
+                                          color: i < (pharmacy['rating'] as int? ?? 0)
+                                              ? Color(0xFF1EC8C8)
+                                              : Colors.grey[300],
+                                          size: 18,
+                                        ),
+                                      ),
                                     ),
                                   ],
                                 ),

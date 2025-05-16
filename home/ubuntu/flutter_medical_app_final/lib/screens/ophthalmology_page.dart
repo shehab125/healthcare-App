@@ -3,14 +3,14 @@ import 'package:medical_app_base/models/doctor.dart';
 import 'package:medical_app_base/widgets/doctor_card.dart';
 import 'package:medical_app_base/screens/specialties_page.dart';
 
-class GeneralMedicinePage extends StatefulWidget {
-  const GeneralMedicinePage({super.key});
+class OphthalmologyPage extends StatefulWidget {
+  const OphthalmologyPage({super.key});
 
   @override
-  State<GeneralMedicinePage> createState() => _GeneralMedicinePageState();
+  State<OphthalmologyPage> createState() => _OphthalmologyPageState();
 }
 
-class _GeneralMedicinePageState extends State<GeneralMedicinePage> {
+class _OphthalmologyPageState extends State<OphthalmologyPage> {
   String searchQuery = '';
   bool showFavoritesOnly = false;
 
@@ -24,12 +24,12 @@ class _GeneralMedicinePageState extends State<GeneralMedicinePage> {
   }
 
   Future<void> _toggleFavorite(Doctor doctor) async {
-    // Implementation needed
+    // Implementation of _toggleFavorite method
   }
 
   @override
   Widget build(BuildContext context) {
-    final doctors = DoctorsData.generalMedicineDoctors
+    final doctors = DoctorsData.ophthalmologyDoctors
         .where((doc) {
           final matchesSearch = doc.name.toLowerCase().contains(searchQuery.toLowerCase());
           if (showFavoritesOnly) {
@@ -71,7 +71,7 @@ class _GeneralMedicinePageState extends State<GeneralMedicinePage> {
                     ],
                   ),
                   const Text(
-                    'General Medicine',
+                    'Ophthalmology',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 28,
