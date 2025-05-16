@@ -17,6 +17,7 @@ import 'package:medical_app_base/screens/records_page.dart';
 import 'package:medical_app_base/screens/profile_page.dart';
 import 'package:medical_app_base/screens/notifications_page.dart';
 import 'package:medical_app_base/screens/settings_page.dart';
+import 'package:medical_app_base/screens/chat_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -112,8 +113,10 @@ class _MainHomeContent extends StatelessWidget {
                           },
                         ),
                         IconButton(
-                          icon: const Icon(Icons.search, color: Colors.white),
-                          onPressed: () {},
+                          icon: const Icon(Icons.chat_bubble_outline, color: Colors.white),
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => ChatPage()));
+                          },
                         ),
                       ],
                     ),
