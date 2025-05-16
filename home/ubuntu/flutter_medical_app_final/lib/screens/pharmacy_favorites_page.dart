@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
 import 'pharmacy_page.dart';
-import 'notifications_page.dart';
+import 'notifications_page_pharmacy.dart';
 import 'profile_page.dart';
 import 'schedule_page.dart';
 import 'pharmacy_info_page.dart';
