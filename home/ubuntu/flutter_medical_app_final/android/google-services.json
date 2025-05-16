@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "583991403119",
+    "project_id": "medical-app-ee563",
+    "storage_bucket": "medical-app-ee563.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583991403119:android:522736563204cb1331e39a",
+        "android_client_info": {
+          "package_name": "com.example.smart_medical_box_app_new_fixed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZmT06FmH6m3v0WxD3ikdFf79y4ym3nR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
