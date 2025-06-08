@@ -92,7 +92,7 @@ class ChatPageState extends State<ChatPage> {
                 CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 18,
-                  backgroundImage: NetworkImage(
+                  backgroundImage: const NetworkImage(
                     'https://randomuser.me/api/portraits/women/44.jpg',
                   ),
                 ),
@@ -270,28 +270,27 @@ class ChatPageState extends State<ChatPage> {
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
-          children:
-              quickReplies.map((text) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 4),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFFE9F7FE),
-                      foregroundColor: Color(0xFF00c6ff),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 8,
-                      ),
-                      textStyle: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    onPressed: () => _sendMessage(text),
-                    child: Text(text),
+          children: quickReplies.map((text) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFFE9F7FE),
+                  foregroundColor: Color(0xFF00c6ff),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                );
-              }).toList(),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 8,
+                  ),
+                  textStyle: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                onPressed: () => _sendMessage(text),
+                child: Text(text),
+              ),
+            );
+          }).toList(),
         ),
       ),
     );
