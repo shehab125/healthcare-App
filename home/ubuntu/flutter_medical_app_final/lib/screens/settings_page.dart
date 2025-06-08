@@ -60,7 +60,11 @@ class SettingsPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
                 boxShadow: [
                   BoxShadow(
+<<<<<<< HEAD
                     color: Colors.grey.withAlpha((0.08 * 255).toInt()),
+=======
+                    color: Colors.grey.withOpacity(0.08),
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b
                     spreadRadius: 1,
                     blurRadius: 4,
                     offset: Offset(0, 1),
@@ -77,9 +81,13 @@ class SettingsPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
+<<<<<<< HEAD
                     MaterialPageRoute(
                       builder: (context) => PasswordManagerPage(),
                     ),
+=======
+                    MaterialPageRoute(builder: (context) => PasswordManagerPage()),
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b
                   );
                 },
               ),
@@ -94,7 +102,11 @@ class SettingsPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
                 boxShadow: [
                   BoxShadow(
+<<<<<<< HEAD
                     color: Colors.grey.withAlpha((0.08 * 255).toInt()),
+=======
+                    color: Colors.grey.withOpacity(0.08),
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b
                     spreadRadius: 1,
                     blurRadius: 4,
                     offset: Offset(0, 1),
@@ -118,4 +130,8 @@ class SettingsPage extends StatelessWidget {
       ),
     );
   }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b

@@ -8,42 +8,74 @@ class SpecialtiesScreen extends StatelessWidget {
     final specialties = [
       {
         'name': 'Cardiology',
+<<<<<<< HEAD
         'icon': Icons.favorite,
+=======
+        'image': 'assets/icons/specialties/cardiology.png',
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b
         'color': const Color(0xFFE3F2FD),
       },
       {
         'name': 'Dermatology',
+<<<<<<< HEAD
         'icon': Icons.spa,
+=======
+        'image': 'assets/icons/specialties/dermatology.png',
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b
         'color': const Color(0xFFE8F5E9),
       },
       {
         'name': 'General Medicine',
+<<<<<<< HEAD
         'icon': Icons.medical_services,
+=======
+        'image': 'assets/icons/specialties/general.png',
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b
         'color': const Color(0xFFFFEBEE),
       },
       {
         'name': 'Gynecology',
+<<<<<<< HEAD
         'icon': Icons.pregnant_woman,
+=======
+        'image': 'assets/icons/specialties/gynecology.png',
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b
         'color': const Color(0xFFF3E5F5),
       },
       {
         'name': 'Dentistry',
+<<<<<<< HEAD
         'icon': Icons.healing,
+=======
+        'image': 'assets/icons/specialties/dentistry.png',
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b
         'color': const Color(0xFFE0F7FA),
       },
       {
         'name': 'Oncology',
+<<<<<<< HEAD
         'icon': Icons.local_hospital,
+=======
+        'image': 'assets/icons/specialties/oncology.png',
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b
         'color': const Color(0xFFFFF3E0),
       },
       {
         'name': 'Ophthalmology',
+<<<<<<< HEAD
         'icon': Icons.remove_red_eye,
+=======
+        'image': 'assets/icons/specialties/ophthalmology.png',
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b
         'color': const Color(0xFFE8EAF6),
       },
       {
         'name': 'Orthopedics',
+<<<<<<< HEAD
         'icon': Icons.accessibility_new,
+=======
+        'image': 'assets/icons/specialties/orthopedics.png',
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b
         'color': const Color(0xFFF1F8E9),
       },
     ];
@@ -111,10 +143,17 @@ class SpecialtiesScreen extends StatelessWidget {
                           ],
                         ),
                         child: Center(
+<<<<<<< HEAD
                           child: Icon(
                             specialty['icon'] as IconData,
                             size: 50,
                             color: Colors.blueAccent,
+=======
+                          child: Image.asset(
+                            specialty['image'] as String,
+                            width: 50,
+                            height: 50,
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b
                           ),
                         ),
                       ),
@@ -138,4 +177,8 @@ class SpecialtiesScreen extends StatelessWidget {
       ),
     );
   }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> 5a67e16128241255dd3da8fb8ba5e804f0a4e71b

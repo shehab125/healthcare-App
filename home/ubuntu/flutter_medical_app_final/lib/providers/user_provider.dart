@@ -56,7 +56,10 @@ class UserProvider with ChangeNotifier {
     }
   }
 
-  Future<void> signIn({required String email, required String password}) async {
+  Future<void> signIn({
+    required String email,
+    required String password,
+  }) async {
     _isLoading = true;
     _error = null;
     notifyListeners();

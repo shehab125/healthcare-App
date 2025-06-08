@@ -29,18 +29,16 @@ class CustomButton extends StatelessWidget {
       elevation: isOutlined ? 0 : 2,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
-        side:
-            isOutlined
-                ? BorderSide(color: color ?? AppColors.primaryColor, width: 2)
-                : BorderSide.none,
+        side: isOutlined
+            ? BorderSide(color: color ?? AppColors.primaryColor, width: 2)
+            : BorderSide.none,
       ),
       child: Text(
         text,
         style: AppStyles.buttonStyle.copyWith(
-          color:
-              isOutlined
-                  ? (textColor ?? AppColors.primaryColor)
-                  : (textColor ?? Colors.white),
+          color: isOutlined
+              ? (textColor ?? AppColors.primaryColor)
+              : (textColor ?? Colors.white),
         ),
       ),
     );

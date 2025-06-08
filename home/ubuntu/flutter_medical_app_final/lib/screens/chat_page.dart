@@ -23,7 +23,7 @@ class ChatPageState extends State<ChatPage> {
     });
     _controller.clear();
     // Simulate AI bot reply
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 2), () {
       setState(() {
         _messages.add(
           _ChatMessage(
@@ -73,9 +73,9 @@ class ChatPageState extends State<ChatPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
+        preferredSize: const Size.fromHeight(60),
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [Color(0xFF00e0ef), Color(0xFF00c6ff)],
               begin: Alignment.topLeft,
@@ -86,18 +86,18 @@ class ChatPageState extends State<ChatPage> {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+                  icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
                   onPressed: () => Navigator.pop(context),
                 ),
-                CircleAvatar(
+                const CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 18,
                   backgroundImage: const NetworkImage(
                     'https://randomuser.me/api/portraits/women/44.jpg',
                   ),
                 ),
-                SizedBox(width: 8),
-                Expanded(
+                const SizedBox(width: 8),
+                const Expanded(
                   child: Text(
                     'Dr. Emma Hall, M.D.',
                     style: TextStyle(
@@ -108,14 +108,14 @@ class ChatPageState extends State<ChatPage> {
                   ),
                 ),
                 IconButton(
-                  icon: Icon(Icons.call, color: Color(0xFF00c6ff)),
+                  icon: const Icon(Icons.call, color: Color(0xFF00c6ff)),
                   onPressed: () {},
                 ),
                 IconButton(
-                  icon: Icon(Icons.videocam, color: Color(0xFF00c6ff)),
+                  icon: const Icon(Icons.videocam, color: Color(0xFF00c6ff)),
                   onPressed: () {},
                 ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
               ],
             ),
           ),
@@ -125,7 +125,7 @@ class ChatPageState extends State<ChatPage> {
         children: [
           Expanded(
             child: ListView.builder(
-              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 0),
+              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 0),
               itemCount: _messages.length,
               itemBuilder: (context, index) {
                 final msg = _messages[index];
@@ -135,8 +135,8 @@ class ChatPageState extends State<ChatPage> {
           ),
           _buildQuickReplies(),
           if (_isTyping)
-            Padding(
-              padding: const EdgeInsets.only(left: 16, bottom: 4),
+            const Padding(
+              padding: EdgeInsets.only(left: 16, bottom: 4),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -158,15 +158,15 @@ class ChatPageState extends State<ChatPage> {
   Widget _buildMessageBubble(_ChatMessage msg) {
     final isUser = msg.isUser;
     final borderRadius = BorderRadius.only(
-      topLeft: Radius.circular(18),
-      topRight: Radius.circular(18),
+      topLeft: const Radius.circular(18),
+      topRight: const Radius.circular(18),
       bottomLeft: Radius.circular(isUser ? 18 : 0),
       bottomRight: Radius.circular(isUser ? 0 : 18),
     );
-    final bubbleColor = isUser ? Color(0xFFE9F7FE) : Colors.black;
-    final borderColor = isUser ? Colors.transparent : Color(0xFF00e0ef);
+    final bubbleColor = isUser ? const Color(0xFFE9F7FE) : Colors.black;
+    final borderColor = isUser ? Colors.transparent : const Color(0xFF00e0ef);
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       child: Column(
         crossAxisAlignment:
             isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
@@ -176,13 +176,14 @@ class ChatPageState extends State<ChatPage> {
                 isUser ? MainAxisAlignment.end : MainAxisAlignment.start,
             children: [
               Container(
-                constraints: BoxConstraints(maxWidth: 220),
+                constraints: const BoxConstraints(maxWidth: 220),
                 decoration: BoxDecoration(
                   color: bubbleColor,
                   border: Border.all(color: borderColor, width: 1.2),
                   borderRadius: borderRadius,
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 child: Text(
                   msg.text,
                   style: TextStyle(
@@ -197,7 +198,7 @@ class ChatPageState extends State<ChatPage> {
             padding: const EdgeInsets.only(top: 2, left: 8, right: 8),
             child: Text(
               msg.time,
-              style: TextStyle(color: Colors.black54, fontSize: 12),
+              style: const TextStyle(color: Colors.black54, fontSize: 12),
             ),
           ),
         ],
@@ -207,8 +208,8 @@ class ChatPageState extends State<ChatPage> {
 
   Widget _buildInputBar() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: const BoxDecoration(
         color: Colors.white,
         border: Border(top: BorderSide(color: Color(0xFF00e0ef), width: 2)),
       ),
@@ -217,13 +218,13 @@ class ChatPageState extends State<ChatPage> {
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                color: Color(0xFFE9F7FE),
+                color: const Color(0xFFE9F7FE),
                 borderRadius: BorderRadius.circular(24),
               ),
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: TextField(
                 controller: _controller,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'Write Here...',
                   border: InputBorder.none,
                 ),
@@ -232,12 +233,12 @@ class ChatPageState extends State<ChatPage> {
             ),
           ),
           IconButton(
-            icon: Icon(Icons.mic, color: Color(0xFF00c6ff)),
+            icon: const Icon(Icons.mic, color: Color(0xFF00c6ff)),
             onPressed: () {},
           ),
-          SizedBox(width: 4),
+          const SizedBox(width: 4),
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               gradient: LinearGradient(
                 colors: [Color(0xFF00e0ef), Color(0xFF00c6ff)],
@@ -246,7 +247,7 @@ class ChatPageState extends State<ChatPage> {
               ),
             ),
             child: IconButton(
-              icon: Icon(Icons.send, color: Colors.white),
+              icon: const Icon(Icons.send, color: Colors.white),
               onPressed: () => _sendMessage(_controller.text),
             ),
           ),
@@ -275,16 +276,16 @@ class ChatPageState extends State<ChatPage> {
               padding: const EdgeInsets.symmetric(horizontal: 4),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFFE9F7FE),
-                  foregroundColor: Color(0xFF00c6ff),
+                  backgroundColor: const Color(0xFFE9F7FE),
+                  foregroundColor: const Color(0xFF00c6ff),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 16,
                     vertical: 8,
                   ),
-                  textStyle: TextStyle(fontWeight: FontWeight.bold),
+                  textStyle: const TextStyle(fontWeight: FontWeight.bold),
                 ),
                 onPressed: () => _sendMessage(text),
                 child: Text(text),

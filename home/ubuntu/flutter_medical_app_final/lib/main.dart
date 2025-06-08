@@ -6,10 +6,12 @@ import 'package:medical_app_base/services/local_storage_service.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await LocalStorageService().init();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
