@@ -1,0 +1,77 @@
+{
+    "project_info": {
+        "project_number": "776285878892",
+        "firebase_url": "https://medcare-aa7c2-default-rtdb.firebaseio.com",
+        "project_id": "medcare-aa7c2",
+        "storage_bucket": "medcare-aa7c2.firebasestorage.app"
+    },
+    "client": [
+        {
+            "client_info": {
+                "mobilesdk_app_id": "1:776285878892:android:762c13110114e204e6b649",
+                "android_client_info": {
+                    "package_name": "com.example.doctorappointment"
+                }
+            },
+            "oauth_client": [
+                {
+                    "client_id": "776285878892-4vt7v8uone76dm1kv6ihmihg5l0mc27b.apps.googleusercontent.com",
+                    "client_type": 1,
+                    "android_info": {
+                        "package_name": "com.example.doctorappointment",
+                        "certificate_hash": "872f8ed81d3ee5083d966275b437ec6b9472c4a1"
+                    }
+                },
+                {
+                    "client_id": "776285878892-q0d8dksbk28dse0n0t4tr7lo1lhe6d5c.apps.googleusercontent.com",
+                    "client_type": 3
+                }
+            ],
+            "api_key": [
+                {
+                    "current_key": "AIzaSyAdj-xvSnv8FF1HTZxlbe_3GjBLE-Y7Rj0"
+                }
+            ],
+            "services": {
+                "appinvite_service": {
+                    "other_platform_oauth_client": [
+                        {
+                            "client_id": "776285878892-q0d8dksbk28dse0n0t4tr7lo1lhe6d5c.apps.googleusercontent.com",
+                            "client_type": 3
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "client_info": {
+                "mobilesdk_app_id": "1:776285878892:android:46b48481d5654dfde6b649",
+                "android_client_info": {
+                    "package_name": "thereviverkid.atwebpages.medcare"
+                }
+            },
+            "oauth_client": [
+                {
+                    "client_id": "776285878892-q0d8dksbk28dse0n0t4tr7lo1lhe6d5c.apps.googleusercontent.com",
+                    "client_type": 3
+                }
+            ],
+            "api_key": [
+                {
+                    "current_key": "AIzaSyAdj-xvSnv8FF1HTZxlbe_3GjBLE-Y7Rj0"
+                }
+            ],
+            "services": {
+                "appinvite_service": {
+                    "other_platform_oauth_client": [
+                        {
+                            "client_id": "776285878892-q0d8dksbk28dse0n0t4tr7lo1lhe6d5c.apps.googleusercontent.com",
+                            "client_type": 3
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "configuration_version": "1"
+}

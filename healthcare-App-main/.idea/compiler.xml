@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="23">
+      <module name="android.cloud_firestore" target="17" />
+      <module name="android.connectivity_plus" target="17" />
+      <module name="android.device_info_plus" target="17" />
+      <module name="android.firebase_auth" target="17" />
+      <module name="android.firebase_core" target="17" />
+      <module name="android.firebase_messaging" target="17" />
+      <module name="android.firebase_storage" target="17" />
+      <module name="android.flutter_facebook_auth" target="17" />
+      <module name="android.flutter_local_notifications" target="17" />
+      <module name="android.flutter_native_splash" target="17" />
+      <module name="android.google_maps_flutter_android" target="17" />
+      <module name="android.google_sign_in_android" target="17" />
+      <module name="android.package_info_plus" target="17" />
+      <module name="android.permission_handler_android" target="17" />
+      <module name="android.stripe_android" target="17" />
+      <module name="io.flutter.plugins.firebase.auth.android.firebase_auth" target="17" />
+      <module name="io.flutter.plugins.firebase.core.android.firebase_core" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
