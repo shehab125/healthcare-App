@@ -22,9 +22,6 @@ A modern and user-friendly medical application built with Flutter that helps use
 - 🔔 نظام الإشعارات
 - ⚙️ إعدادات وتفضيلات المستخدم
 
-## Screenshots / لقطات الشاشة
-
-[Add screenshots here / أضف لقطات الشاشة هنا]
 
 ## Getting Started / البدء
 
@@ -88,7 +85,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact / الاتصال
 
-[Your Name / اسمك] - [Your Email / بريدك الإلكتروني]
+Ahmed and shehab 
+shehabhosny889@gmail.com
 
 Project Link: [https://github.com/yourusername/flutter_medical_app_final](https://github.com/yourusername/flutter_medical_app_final)
 
